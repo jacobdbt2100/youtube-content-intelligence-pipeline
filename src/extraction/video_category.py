@@ -1,5 +1,4 @@
-from src.extraction.youtube_client import get_youtube_client
-
+from src.youtube_client import get_youtube_client
 
 def extract_video_categories():
     """
