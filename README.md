@@ -3,40 +3,6 @@ An incremental data pipeline for collecting, transforming, and analyzing YouTube
 ___
 
 
-
-
-
-
-
-## Repository Structure
-
-```text
-youtube-content-intelligence-pipeline/
-│
-├── .gitignore
-├── README.md
-├── jobs/
-│   ├── daily_pipeline.py
-│   └── reference_pipeline.py
-│
-├── notebooks/
-│
-├── requirements.txt
-│
-└── src/
-    ├── extraction/
-    │   ├── __init__.py
-    │   ├── creator_daily_stats.py
-    │   ├── creators.py
-    │   ├── video_category.py
-    │   ├── video_daily_stats.py
-    │   ├── videos.py
-    │   └── youtube_client.py
-    │
-    └── ingestion/
-        └── ...
-```
-
 ## Volume
 
 ```text
