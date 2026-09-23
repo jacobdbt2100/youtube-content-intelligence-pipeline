@@ -3,26 +3,29 @@ An incremental data pipeline for collecting, transforming, and analyzing YouTube
 ___
 
 
-## Volume
+## Architecture
 
 ```text
-Volumes/
-└── youtube_content_intelligence/
-    │
-    ├── creator_daily_stats/
-    │   └── incoming/
-    │
-    ├── creators/
-    │   └── incoming/
-    │
-    ├── video_category/
-    │   └── incoming/
-    │
-    ├── video_daily_stats/
-    │   └── incoming/
-    │
-    └── videos/
-        └── incoming/
+                 DATA ENGINEERING
+                       │
+YouTube API ──→ Volume ──→ Bronze
+                            │
+                            ↓
+                         Silver
+                            │
+                            ↓
+                       ┌─────────┐
+                       │   dbt   │
+                       └─────────┘
+                            │
+                     staging models
+                            ↓
+                  intermediate models
+                            ↓
+                       Gold marts
+                            │
+                            ↓
+                    Dashboard / Analysis
 ```
 
 
